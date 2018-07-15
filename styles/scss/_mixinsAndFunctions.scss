@@ -1,0 +1,51 @@
+@mixin ulList($_num) {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat($_num,1fr);
+    justify-items: center;
+    align-items: baseline;
+}
+
+@mixin ulListRows($_num) {
+    list-style: none;
+    display: grid;
+    grid-template-rows: repeat($_num,1fr);
+    grid-gap: 1rem;
+}
+
+@mixin fontLine($_font,$_line) {
+    font-size: $_font;
+    line-height: $_line;
+}
+
+@mixin wh($_w,$_h) {
+    width: $_w;
+    height: $_h;
+}
+
+@mixin fontHeaders {
+    font-family: 'LeckerliOne', cursive;
+    font-size: 3.3rem;
+    font-weight: bold;
+}
+
+@mixin fontSubheaders {
+    @include fontLine(3.5rem,3rem);
+    font-weight: bold;
+}
+
+@mixin gridPosition($_rs,$_re,$_cs,$_ce) {
+        grid-row-start: $_rs;
+        grid-row-end: $_re;
+        grid-column-start: $_cs;
+        grid-column-end: $_ce;
+}
+
+@mixin inputBox($_w,$_h) {
+    color: $colorWhite;
+    background-color: $colorGray;
+    @include wh($_w,$_h);
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem;
+}

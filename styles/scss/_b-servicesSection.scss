@@ -1,0 +1,49 @@
+.b-servicesSection {
+    background-color: darken($colorBlueBg,5%);
+    color: $colorWhite;
+    padding: 11rem 25rem;
+    &__header {
+        @include fontHeaders;
+        text-align: center;
+        &_margin {
+            margin-bottom: 4rem;
+        }
+    }
+    &__subheader {
+        @include fontSubheaders;
+        &_margin {
+            text-align: center;
+            margin: 2rem 0 7.5rem;
+        }
+    }
+    &__articles {
+        @include ulList(3);
+        grid-gap: 9rem;
+    }
+}
+
+.b-service {
+    &_grid {
+        display: grid;
+        grid-template-columns: 6rem 1fr;
+        grid-gap: 3rem;
+    }
+    &__image {
+        @include fontLine(5rem,5rem);
+        &_grid {
+            @include gridPosition(1,3,1,2);
+        }
+    }
+    &__header {
+        @include fontLine(2rem,2rem);
+        &_grid {
+            @include gridPosition(1,2,2,3);
+        }
+    }
+    &__content {
+        @include fontLine(1.4rem,2rem);
+        &_grid {
+            @include gridPosition(2,3,2,3);
+        }        
+    }
+}

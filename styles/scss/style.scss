@@ -1,1 +1,33 @@
-@import "../../packages/bootstrap/bootstrap.scss";
+@import "_variables";
+@import "_mixinsAndFunctions";
+@import url('https://fonts.googleapis.com/css?family=Leckerli+One');
+//@import "../../packages/bootstrap/bootstrap.scss";
+@import "_header";
+@import "_b-profileSection";
+@import "_footer";
+@import "_btn";
+@import "_b-whoWeAreSection";
+@import "_b-servicesSection";
+@import "_b-clientSection";
+@import "_b-blogSection";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+.b-container {
+    width: 167rem;
+    margin: 0 auto;
+}
+
+

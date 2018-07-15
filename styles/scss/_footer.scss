@@ -1,0 +1,117 @@
+.footer {
+    height: 100vh;
+    background: url(../../images/bgFooter.png) 100% 100% no-repeat;
+    background-size: cover;
+    color: $colorWhite;
+    display: grid;
+    grid-template-rows: 3rem 1fr 20rem 8rem;
+    padding: 11.4rem 22.8rem;
+}
+
+.b-footerHeader {
+    font-family: 'LeckerliOne', sans-serif;
+    @include fontLine(3.3rem,3.3rem);
+    &_footerPosition {
+
+    }
+}
+
+.b-contacts{
+    &_footerPosition {
+        padding-top: 3.5rem;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    &__headerText {
+        font-family: 'Montserrat-Black', sans-serif;
+        @include fontLine(3.6rem,3.2rem);
+        font-weight: bold;
+        &_margin {
+            margin-bottom: 8rem;
+        }
+    }
+    &__content {
+        @include ulListRows(3);
+    }
+    &__contentItem {
+        color: $colorWhite;
+        @include fontLine(1.7rem,2.4rem);
+        &_grid {
+            display: grid;
+            grid-template-columns: 10rem 1fr;
+            grid-template-rows: repeat(2, 1fr);
+        }
+    }
+    &__imageIcon {
+        font-size: 5.5rem;
+        &_grid {
+            @include gridPosition(1,3,1,2);
+            justify-self: center;
+            align-self: center;
+        }
+    }
+    &__contactName {
+        &_grid {
+            @include gridPosition(1,2,2,3);
+            align-self: end;
+        }
+    }
+    &__contactValue {
+        &_grid {
+            @include gridPosition(2,3,2,3);
+        }
+    }
+}
+
+.b-contactForm {
+    display: grid;
+    grid-template-columns: 10rem 1fr;
+    &__label {
+        @include wh(7rem,2.4rem);
+        @include fontLine(1.7rem,2.4rem);
+    }
+    &__name,
+    &__email,
+    &__phone {
+        @include inputBox(36rem,3.5rem);
+        &_margin {
+            margin-bottom: 1.7rem;
+        }
+    }
+    &__message {
+        @include inputBox(36rem,8rem);
+        &_margin {
+            margin-bottom: 2.5rem;
+        }
+    }
+}
+
+.b-socialIcons {
+    @include ulList(7);
+    &_footerPosition {
+        margin: 7rem auto;
+        grid-gap: 3rem;
+    }
+    &__socailIcon {
+        @include fontLine(2.5rem,5.7rem);
+        @include wh(5.7rem,5.7rem);
+        border: .3rem solid $colorWhite;
+        border-radius: 300rem;
+        text-align: center;
+    }
+}
+
+.b-copyright {
+    //height: 17.5rem;
+    text-align: center;
+    &__designed {
+        @include fontLine(1.7rem,2.4rem);
+        &_footerPosition {
+            margin-bottom: 3rem;
+        }
+    }
+    &__reservedText {
+        text-transform: uppercase;
+        @include fontLine(1.7rem,2.4rem);
+    }
+}

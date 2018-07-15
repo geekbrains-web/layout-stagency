@@ -1,0 +1,36 @@
+.b-clientSection {
+    @include wh(100%,75.5rem);
+    background: url(../../images/bgCliens.png) 100% 100% no-repeat;
+    background-size: cover;
+    color: $colorWhite;
+    &__header {
+        @include fontHeaders;
+        &_position {
+            text-align: center;
+            padding-top: 13rem;
+        }
+    }
+    &__subheader {
+        @include fontSubheaders;
+        &_position {
+            text-align: center;
+            padding-top: 2rem;
+        }
+    }
+    &__content {
+        @include fontLine(1.7rem,3rem);
+        &_position {
+            width: 55rem;
+            margin: 0 auto;
+            text-align: center;
+            padding: 5rem 0 12rem;
+        }
+    }
+}
+
+.b-clients {
+    @include ulList(4);
+    &_position {
+        padding: 0 22rem;
+    }
+}

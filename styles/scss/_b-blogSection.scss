@@ -1,0 +1,153 @@
+.b-blogSection {
+    padding: 13.5rem 25rem 16.5rem;
+    &_grid {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(3,23.2rem);
+        grid-gap: 2.8rem;
+    }
+}
+
+.b-blog1 {
+    &__header {
+        @include fontHeaders;
+        color: $colorGrayLigth;
+    }
+    &__subheader {
+        @include fontSubheaders;
+        &_position {
+            margin-bottom: 5rem;
+        }
+    }
+    &__content {
+        @include fontLine(1.7rem,3rem);
+    }
+    &_position {
+        @include gridPosition(1,2,1,3);
+    }
+}
+
+.b-blog2 {
+    padding: 5.5rem 4.5rem 3.5rem;
+    background-color: $colorBlueBg;
+    color: $colorWhite;
+    &_position {
+        @include gridPosition(2,3,1,3);
+    }
+    &__content {
+        @include fontLine(1.7rem,3rem);
+        &_position {
+            margin-bottom: 4.5rem;
+            text-align: center;
+        }
+    }
+    &__date {
+        @include fontLine(2rem,1.6rem);
+        &_position {
+            text-align: center;
+        }
+    }
+}
+
+.b-blog3 {
+    background-color: $colorGrayBgBlog;
+    color: $colorGrayBlog;
+    &_position {
+        @include gridPosition(3,4,1,2);
+    }
+    &__header {
+        @include fontSubheaders;
+        &_position {
+            text-align: center;
+            margin: 5.5rem 3.6rem 6rem;
+        }
+    }
+    &__date {
+        @include fontLine(2rem,1.6rem);
+        &_position {
+            text-align: center;
+            margin-top: 3.7rem;
+        }
+    }
+}
+
+.b-blog4 {
+    background-color: $colorBlack;
+    color: $colorWhite;
+    &_position {
+        @include gridPosition(3,4,2,3);
+    }
+    &__header {
+        @include fontSubheaders;
+        &_position {
+            text-align: center;
+            margin: 5.5rem 3.6rem 6rem;
+        }
+    }
+    &__date {
+        @include fontLine(2rem,1.6rem);
+        &_position {
+            text-align: center;
+            margin-top: 3.7rem;
+        }
+    }
+}
+
+.b-blog5 {
+    background: url(../../images/bgBlog.png) 100% 100% no-repeat;
+    background-size: cover;
+    color: $colorWhite;
+    &_position {
+        @include gridPosition(1,3,3,5);
+    }
+    &__header {
+        @include fontSubheaders;
+        &_position {
+            text-align: center;
+            margin-top: 21.5rem;
+        }
+    }
+    &__date {
+        @include fontLine(2rem,1.6rem);
+        &_position {
+            text-align: center;
+            margin-top: 5.5rem;
+        }
+    }
+    &__content {
+        @include fontLine(2rem,3rem);
+        &_position {
+            text-align: center;
+            margin: 1.5rem 4.6rem;
+        }
+    }
+}
+
+.b-blog6 {
+    background-color: $colorPink;
+    color: $colorWhite;
+    &_position {
+        @include gridPosition(3,4,3,5);
+    }
+    &__header {
+        @include fontSubheaders;
+        &_position {
+            text-align: center;
+            margin-top: 1rem;
+        }
+    }
+    &__date {
+        @include fontLine(2rem,1.6rem);
+        &_position {
+            text-align: center;
+            margin-top: 2.2rem;
+        }
+    }
+    &__content {
+        @include fontLine(2rem,3rem);
+        &_position {
+            text-align: center;
+            margin: 3rem 6.6rem;
+        }
+    }
+}

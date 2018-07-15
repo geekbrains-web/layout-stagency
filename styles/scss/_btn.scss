@@ -1,0 +1,22 @@
+.b-btn {
+    @include wh(13rem,3.6rem);
+    @include fontLine(1.6rem,1.6rem);
+    border: none;
+    outline: none;
+    border-radius: 2rem;
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.02);
+    }
+    &_standart {
+        color: $colorWhite;
+        background-color: $colorBlue;
+    }
+    &_invert {
+        color: $colorWhite;
+        background-color: #3b4374;
+    }
+    &_contactFormPosition {
+        margin-left: 10rem;
+    }
+}

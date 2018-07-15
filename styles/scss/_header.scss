@@ -1,0 +1,82 @@
+.header {
+    height: 100vh;//94.5rem;
+    background: url(../../images/bgHeader.png) 100% 100% no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.b-logo {
+    width: 19.5rem;
+    font-family: 'Montserrat-Black', sans-serif;
+    @include fontLine(3.6rem,3.2rem);
+    font-weight: bold;
+    color: $colorWhite;
+    &_headerPosition {
+        position: absolute;
+        top: 4rem;
+        left: 25.5rem;
+        display: flex;
+    }
+    &__firstPart {
+        padding-right: .5rem;
+        &_colorBlue {
+            color: $colorBlue;
+        }
+    }
+}
+
+.b-headerNav {
+    @include ulList(6); 
+    @include fontLine(1.2rem,2rem);
+    @include wh(54.3rem,7rem);
+    color: $colorWhite;
+    &__link {
+        text-transform: uppercase;
+        padding-top: 4rem;
+        &_active {
+            border-top: .5rem solid $colorBlue;
+        }
+        &:hover {
+            cursor: pointer;
+            font-weight: bold;
+        }
+    }
+    &_headerPosition {
+        position: absolute;
+        top: 0;
+        right: 29rem;
+    }
+}
+
+.b-annotation {
+    color: $colorWhite;
+    &__header {
+        @include fontHeaders;
+    }
+    &__content {
+        width: 56rem;
+        @include fontLine(1.7rem,3rem);
+        padding: 6rem 0;
+    }
+    &_headerPosition {
+        position: absolute;
+        top: 28.4rem;
+        left: 25.5rem;
+    }
+}
+
+.imageInDiv {
+    max-width: 65rem;
+    max-height: 82rem;
+}
+
+.b-frontImage {
+    width: 65rem;
+    height: 82rem;
+    &_headerPosition {
+        position: absolute;
+        top: 17rem;
+        left: 85rem;
+        z-index: 2;
+    }
+}
