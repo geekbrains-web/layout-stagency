@@ -22,36 +22,99 @@
         grid-template-rows: 41.7rem 25.6rem;
         grid-template-columns: repeat(4, 1fr);
     }
-    &__image {
+    &__wrap {
+        perspective: 1000px;
         &_position1 {
             @include gridPosition(1,2,1,3);
-            background: url(../../images/profile1.jpg) no-repeat center;
-            background-size: cover;
         }
         &_position2 {
             @include gridPosition(2,3,1,2);
-            background: url(../../images/profile2.jpg) no-repeat center;
-            background-size: cover;
         }
         &_position3 {
             @include gridPosition(2,3,2,3);
-            background: url(../../images/profile3.jpg) no-repeat center;
-            background-size: cover;
         }
         &_position4 {
             @include gridPosition(1,3,3,4);
-            background: url(../../images/profile4.png) no-repeat center;
-            background-size: cover;
         }
         &_position5 {
             @include gridPosition(1,2,4,5);
-            background: url(../../images/profile5.jpg) no-repeat center;
-            background-size: cover;
         }
         &_position6 {
             @include gridPosition(2,3,4,5);
+        }
+        &:hover .b-profileImages__image_position1Front,
+        &:hover .b-profileImages__image_position2Front,
+        &:hover .b-profileImages__image_position3Front,
+        &:hover .b-profileImages__image_position4Front,
+        &:hover .b-profileImages__image_position5Front,
+        &:hover .b-profileImages__image_position6Front {
+            transform: rotateY(180deg);
+        }
+        &:hover .b-profileImages__image_position1Back,
+        &:hover .b-profileImages__image_position2Back,
+        &:hover .b-profileImages__image_position3Back,
+        &:hover .b-profileImages__image_position4Back,
+        &:hover .b-profileImages__image_position5Back,
+        &:hover .b-profileImages__image_position6Back {
+            transform: rotateY(360deg);
+        }
+    }
+    &__image {
+        backface-visibility: hidden;
+        transition: 2s;
+        @include wh(100%,100%);
+        @include fontLine(4rem,4rem);
+        font-weight: bold;
+        color: $colorGrayLigth;
+        text-align: center;
+        &_position1Front,
+        &_position2Front,
+        &_position3Front,
+        &_position4Front,
+        &_position5Front,
+        &_position6Front,
+        &_position1Back,
+        &_position2Back,
+        &_position3Back,
+        &_position4Back,
+        &_position5Back,
+        &_position6Back {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        &_position1Front {
+            background: url(../../images/profile1.jpg) no-repeat center;
+            background-size: cover;
+        }
+        &_position2Front {
+            background: url(../../images/profile2.jpg) no-repeat center;
+            background-size: cover;
+        }
+        &_position3Front {
+            background: url(../../images/profile3.jpg) no-repeat center;
+            background-size: cover;
+        }
+        &_position4Front {
+            background: url(../../images/profile4.png) no-repeat center;
+            background-size: cover;
+        }
+        &_position5Front {
+            background: url(../../images/profile5.jpg) no-repeat center;
+            background-size: cover;
+        }
+        &_position6Front {
             background: url(../../images/profile6.jpg) no-repeat center;
             background-size: cover;
+        }
+        &_position1Back,
+        &_position2Back,
+        &_position3Back,
+        &_position4Back,
+        &_position5Back,
+        &_position6Back {
+            //backface-visibility: hidden;
+            transform: rotateY(180deg);
         }
     }
 }

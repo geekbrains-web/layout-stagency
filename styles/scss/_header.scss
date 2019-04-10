@@ -11,10 +11,12 @@
     @include fontLine(3.6rem,3.2rem);
     font-weight: bold;
     color: $colorWhite;
+    animation: moveDown250 2s;
     &_headerPosition {
         position: absolute;
         top: 4rem;
-        left: 25.5rem;
+        //left: 25.5rem;
+        left: 15.26%;
         display: flex;
     }
     &__firstPart {
@@ -30,6 +32,7 @@
     @include fontLine(1.2rem,2rem);
     @include wh(54.3rem,7rem);
     color: $colorWhite;
+    animation: moveDown 2s;
     &__link {
         text-transform: uppercase;
         padding-top: 4rem;
@@ -44,12 +47,14 @@
     &_headerPosition {
         position: absolute;
         top: 0;
-        right: 29rem;
+        //right: 29rem;
+        right: 17.36%;
     }
 }
 
 .b-annotation {
     color: $colorWhite;
+    animation: show 5s;
     &__header {
         @include fontHeaders;
     }
@@ -61,7 +66,8 @@
     &_headerPosition {
         position: absolute;
         top: 28.4rem;
-        left: 25.5rem;
+        //left: 25.5rem;
+        left: 15.26%;
     }
 }
 
@@ -73,10 +79,12 @@
 .b-frontImage {
     width: 65rem;
     height: 82rem;
+    animation: show 5s;
     &_headerPosition {
         position: absolute;
         top: 17rem;
-        left: 85rem;
+        // left: 85rem;
+        right: 10.18%;
         z-index: 2;
     }
 }

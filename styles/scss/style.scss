@@ -1,7 +1,7 @@
 @import "_variables";
 @import "_mixinsAndFunctions";
 @import url('https://fonts.googleapis.com/css?family=Leckerli+One');
-//@import "../../packages/bootstrap/bootstrap.scss";
+@import "../../packages/bootstrap/bootstrap.scss";
 @import "_header";
 @import "_b-profileSection";
 @import "_footer";
@@ -10,6 +10,7 @@
 @import "_b-servicesSection";
 @import "_b-clientSection";
 @import "_b-blogSection";
+@import "_animation";
 
 * {
     margin: 0;
@@ -26,8 +27,30 @@ body {
 }
 
 .b-container {
-    width: 167rem;
+    max-width: 167rem;
     margin: 0 auto;
+    // @include media-breakpoint-only(xl) {
+    //     max-width: 114rem;
+    // };
+    @include media-breakpoint-only(lg) {
+        max-width: 96rem;
+    };
+    @include media-breakpoint-only(md) {
+        max-width: 72rem;
+    };
+    @include media-breakpoint-only(sm) {
+        max-width: 54rem;
+    };
+    @include media-breakpoint-only(xs) {
+        max-width: 100%;
+    };
 }
 
+//bootstrap methods
+.row_position {
+    text-align: center;
+}
 
+.col_margin {
+    margin-bottom: 5rem;
+}

@@ -1,0 +1,19 @@
+@keyframes moveDown {
+    from {transform: translateY(-100%);}
+    to {transform: translateY(0);}
+}
+
+@keyframes moveDown250 {
+    from {transform: translateY(-250%);}
+    to {transform: translateY(0);}
+}
+
+@keyframes moveRight {
+    from {transform: translateX(-100%);}
+    to {transform: translateX(0);}
+}
+
+@keyframes show {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

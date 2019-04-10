@@ -8,7 +8,19 @@
     }
 }
 
+.b-blog1:hover,
+.b-blog2:hover, 
+.b-blog3:hover, 
+.b-blog4:hover, 
+.b-blog5:hover, 
+.b-blog6:hover {    
+    box-shadow: 1rem 1.2rem 1rem $colorGrayLigth;
+    transform: translate(-.2rem, -.2rem);
+    cursor: pointer;
+}
+
 .b-blog1 {
+    transition: .3s;
     &__header {
         @include fontHeaders;
         color: $colorGrayLigth;
@@ -28,7 +40,8 @@
 }
 
 .b-blog2 {
-    padding: 5.5rem 4.5rem 3.5rem;
+    transition: .3s;
+    padding: 3.5rem 4.5rem;
     background-color: $colorBlueBg;
     color: $colorWhite;
     &_position {
@@ -50,6 +63,7 @@
 }
 
 .b-blog3 {
+    transition: .3s;
     background-color: $colorGrayBgBlog;
     color: $colorGrayBlog;
     &_position {
@@ -72,6 +86,7 @@
 }
 
 .b-blog4 {
+    transition: .3s;
     background-color: $colorBlack;
     color: $colorWhite;
     &_position {
@@ -94,6 +109,7 @@
 }
 
 .b-blog5 {
+    transition: .3s;
     background: url(../../images/bgBlog.png) 100% 100% no-repeat;
     background-size: cover;
     color: $colorWhite;
@@ -124,6 +140,7 @@
 }
 
 .b-blog6 {
+    transition: .3s;
     background-color: $colorPink;
     color: $colorWhite;
     &_position {
